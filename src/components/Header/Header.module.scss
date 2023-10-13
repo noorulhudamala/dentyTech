@@ -1,0 +1,24 @@
+.Header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    &_logoContainer {
+        display: flex;
+        img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+        p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+    }
+    &_SignUpBtn{
+        background-color: #ff5828;
+        color: white;
+        border: 1px solid #ff5828;
+    }
+}
