@@ -6,9 +6,30 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
+  font-family: Jost;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+p{
+  margin: 0 !important;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 8px;
+}
+
+.fontLight {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.heading {
+  font-weight: 400;
+}
+

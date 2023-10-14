@@ -1,9 +1,27 @@
+@import  '../../styles/_variables';
+
 .Header{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    position: fixed;
+    &_menuIconContainer {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 6px;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
     &_logoContainer {
         display: flex;
+        justify-content: center;
+        align-items: center;
         img {
             width: 30px;
             height: 30px;
@@ -16,8 +34,8 @@
         }
     }
     &_SignUpBtn{
-        background-color: #ff5828;
+        background-color: $orange;
         color: white;
-        border: 1px solid #ff5828;
+        border: 1px solid $orange;
     }
 }
