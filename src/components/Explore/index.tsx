@@ -10,8 +10,9 @@ import {
   img11,
   img2,
   img12,
-  img9,
-  img6,
+  img1,
+    img6,
+  img3,
 } from "../../assets/images";
 import { useEffect } from "react";
 const Explore = () => {
@@ -28,9 +29,9 @@ const Explore = () => {
     { name: "img12", src: img12 },
   ];
   const row2 = [
-    { name: "tech", src: tech },
-    { name: "tooth", src: tooth },
-    { name: "dna", src: dna },
+    { name: "tech", src: img1 },
+    { name: "tooth", src: img6 },
+    { name: "dna", src: img3 },
   ];
 
     useEffect(() => {
@@ -95,7 +96,7 @@ const Explore = () => {
         </div>
         <div className={`${styles.slider}`}>
           <div id="slideDown" className={`${styles.sliderDownward}`}>
-            {row1.map((img) => (
+            {row2.map((img) => (
               <div id={img.name} className={`${styles.imageContainer}`}>
                 <img src={img.src} alt={img.name} />
               </div>
