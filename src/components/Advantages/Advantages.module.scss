@@ -1,0 +1,138 @@
+@import "../../styles/variables";
+
+
+@keyframes opacity {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+@keyframes slide-middle {
+  0% {
+    opacity:1;
+    transform: translateY(20vh) rotate(-65deg); /* Start at the bottom of the screen */
+  }
+  100% {
+    transform: translateY(0vh); /* Slide up to the middle of the screen */
+  }
+}
+
+@mixin rotateImage($degree) {
+  @keyframes rotate-anim-#{$degree} {
+    0% {
+      transform: rotate(0deg); 
+    }
+    100% {
+      transform: rotate(#{degree}deg); 
+    }
+  }
+  animation: rotate-anim-#{$degree} 2s forwards;
+}
+
+@keyframes slide-top {
+    100% {
+      transform: translateY(-100vh); /* Slide up to the top of the screen */
+    }
+  }
+
+@keyframes slide-down {
+    0% {
+        opacity:0;
+        transform: translateY(0%); /* Start at the middle of the screen */
+    }
+    100% {
+        opacity: 0;
+      transform: translateY(100vh); /* Slide up to the bottom of the screen */
+    }
+  }
+
+  @keyframes arrow-animation {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(35%);
+    }
+  }
+
+.Advantages {
+  height: 79vh;
+  display: flex;
+  align-items: center;
+  transition: all 1500ms ease-in-out;
+  animation: opacity 3s ease-in-out;
+  &_mainHeading {
+    letter-spacing: 4px;
+    font-size: 9.3rem;
+  }
+}
+
+.imageContainer {
+  position: absolute;
+  z-index: 1;
+  left: 40%;
+  top: 27%;
+  overflow: hidden;
+  border-radius: 50px;
+  display: none;
+  transition: all 1500ms ease-in-out;
+  animation-fill-mode: forwards;
+  img {
+    width: 320px;
+    height: 350px;
+  }
+}
+div [id="img4"] {
+  background-color: $bgGrey;
+}
+div [id="img3"] {
+  background-color: $skyBlue;
+}
+div [id="img2"] {
+  background-color: $bgCream;
+}
+div [id="img1"] {
+  background-color: $bgSkin;
+}
+.slide-mid {
+    display: block;
+    animation: slide-middle 3s ease-in-out;
+}
+.rotate10 {
+  @include rotateImage(-10);
+}
+.rotate20 {
+  @include rotateImage(-20);
+}
+.rotate30 {
+  @include rotateImage(-30);
+}
+.rotate40 {
+  @include rotateImage(-40);
+}
+.slideUp {
+    animation: slide-top 2s ease-in-out;
+}
+.slide-down{
+    display: none;
+    animation: slide-down 1s ease-in-out;
+}
+
+.arrowDow{
+    position: absolute;
+    top:89%;
+    left:49%;
+    // background-color: red;
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 50% / 100% 100% 0 0; 
+    width: 100px;
+    height: 50px;
+    img {
+        width: 50px;
+        height: 40px;
+    animation: arrow-animation linear 1s infinite;
+    }
+}
