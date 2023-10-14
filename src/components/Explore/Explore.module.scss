@@ -1,0 +1,116 @@
+@import "../../styles/variables";
+
+@keyframes slide-up {
+  0% {
+    top: 0px;
+  }
+  20%{
+    top: -30vh;
+  }
+  40%{
+    top: -30vh;
+  }
+  60%{
+    top: -50vh;
+  }
+  80%{
+    top: -50vh;
+  }
+  100% {
+    top: -80vh;
+  }
+}
+
+@keyframes slide-down {
+  0% {
+    top: -80vh;
+  }
+  20%{
+    top: -50vh;
+  }
+  40%{
+    top: -50vh;
+  }
+  60%{
+    top: -30vh;
+  }
+  80%{
+    top: -30vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes rotate-left {
+    0%{
+        transform: rotateY(90deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+@keyframes rotate-right {
+    0%{
+        transform: rotateY(-90deg);
+    }
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+
+.Explore {
+  height: 80vh;
+  align-items: center;
+  //   margin-top: 15%;
+  display: flex;
+  &_mainHeading {
+    letter-spacing: 5px;
+    font-size: 3rem;
+    text-align: left;
+    margin: 5% 0;
+  }
+  button {
+    width: 100%;
+    margin: 0 10px;
+  }
+  .orange {
+    background-color: $orange;
+    color: white;
+    border: 1px solid $orange;
+  }
+}
+
+.slider {
+  overflow: hidden;
+  height: 80vh;
+  width: 50%;
+  .imageContainer {
+    overflow: hidden;
+    display: flex;
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: $bgCream;
+    margin: 7px;
+  }
+  img {
+    width: 200px;
+    height: 300px;
+  }
+}
+.moveUp {
+    position: relative;
+    animation: slide-up 5s infinite 1s;
+}
+.moveDown {
+    position: relative;
+    animation: slide-down 5s infinite 1s;
+}
+.sliderUpward {
+  position: relative;
+  animation: rotate-left 1s;
+}
+.sliderDownward {
+  position: relative;
+  animation: rotate-right 1s;
+}
